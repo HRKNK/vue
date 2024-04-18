@@ -14,6 +14,8 @@ export const useAnyStateStore = defineStore("anyState", {
     },
     async fetchData() {
       try {
+        console.log("Sending a request");
+
         this.loading = true;
         this.data = await fetch("https://jsonplaceholder.typicode.com/todos/1")
           .then((response) => response.json())

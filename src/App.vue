@@ -2,15 +2,19 @@
 import { ref } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
-import { useRouter } from "vue-router";
+// import { useRouter } from "vue-router";
 </script>
 <template>
   {{ console.warn("Произошел рендер компонента APP.vue") }}
   <!-- <button type="button" @click="count++">count is APP.vue {{ count }}</button> -->
   <h2><strong>Текущий путь маршрута:</strong> {{ $route.path }}</h2>
 
+  <RouterLink to="/dashboard">Go to Dashboard</RouterLink>
+  <RouterLink to="/login">Go to Login</RouterLink>
+
   <RouterLink to="/about">Go to About</RouterLink>
   <RouterLink to="/">Go to Home</RouterLink>
+
   <RouterView />
 
   <div>

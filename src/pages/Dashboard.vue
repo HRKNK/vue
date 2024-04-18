@@ -7,8 +7,8 @@ defineProps({
 </script>
 
 <template>
-  {{ console.warn("Произошел рендер компонента About.vue") }}
-  <h5>About.vue</h5>
+  {{ console.warn("Произошел рендер компонента Dashboard.vue") }}
+  <h5>Dashboard.vue</h5>
 </template>
 
 <style scoped>

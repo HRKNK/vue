@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 defineProps({
   msg: String,
@@ -7,6 +7,14 @@ defineProps({
     type: String,
     default: "Hello",
   },
+});
+
+import { useAnyStateStore } from "@/configuration/store";
+
+const store = useAnyStateStore();
+
+onMounted(() => {
+  store.fetchData();
 });
 
 const count = ref({ counter: 0 });
